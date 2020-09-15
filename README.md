@@ -140,6 +140,16 @@ ___
 
 ___
 
+# Связь С БД
+___
+
+![JDBC](https://metanit.com/java/database/pics/jdbc.png)
+
+___
+
+# Коллекции List, Set, Map
+
+![ArrayList](https://d1jnx9ba8s6j9r.cloudfront.net/blog/wp-content/uploads/2017/05/vector-list.png)
 ### класс *DBAccess*, для связи с БД:
 ```Java
 import java.sql.Connection;
