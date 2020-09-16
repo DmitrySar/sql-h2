@@ -48,13 +48,40 @@ SELECT * FROM PERSON WHERE LASTNAME LIKE 'Ва%';
 
 ## Вычисления 
 
+### Арифметические операции
+
+```SQL
+CALL (1+2+3)/3;
+```
+
+```SQL
+SELECT (1+2+3)/3 AS RESULT;
+```
+
+### Рассчёт по строкам, представления *VIEW*
+
+```SQL
+CREATE VIEW AVERAGE AS SELECT LASTNAME , NAME ,SECONDNAME ,PAYOFF1 ,PAYOFF2 ,PAYOFF3  FROM DEMO,PERSON WHERE PERSON_ID=PERSON.ID;
+CREATE VIEW WITH_AVERAGE AS SELECT LASTNAME ,NAME ,SECONDNAME ,PAYOFF1 ,PAYOFF2 ,PAYOFF3 , (1*PAYOFF1 + PAYOFF2 + PAYOFF3 ) / 3 AS RESULT FROM AVERAGE;
+```
+
 ### Функции *COUNT, MAX, MIN, AVG ...*
+
+```SQL
+SELECT LASTNAME , SUM(RESULT) AS SUMMA FROM WITH_AVERAGE GROUP BY LASTNAME;
+```
+
+### Внешние ключи
+
+```SQL
+ALTER TABLE DEMO ADD COLUMN (PERSON_ID INT);
+ALTER TABLE DEMO ADD FOREIGN KEY ( PERSON_ID) REFERENCES PERSON (ID);
+```
 
 ### Запрос SQL, возвращающий количество дублей фамилий:
 ```SQL
 SELECT LASTNAME , COUNT(LASTNAME) AS DOUBLES FROM PERSON GROUP BY LASTNAME HAVING DOUBLES;
 ```
-
 ___
  - # Задание:
    - ### Написать запрос, возвращающий  количество дублей фамилий, если совпадений больше 3. Результат отсортировать по количеству совпадений от большего к меньшему.
