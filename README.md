@@ -22,6 +22,7 @@ INSERT INTO TEST VALUES(1, 'Hello');
 ### Запрос к таблице
 ```SQL
 SELECT * FROM TEST ORDER BY ID;
+SELECT * FROM PERSON LIMIT 100, 20;
 ```
 
 ### Изменить данные в строке
