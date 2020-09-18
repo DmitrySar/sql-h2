@@ -84,6 +84,16 @@ ALTER TABLE DEMO ADD FOREIGN KEY ( PERSON_ID) REFERENCES PERSON (ID);
 ```SQL
 SELECT LASTNAME , COUNT(LASTNAME) AS DOUBLES FROM PERSON GROUP BY LASTNAME HAVING DOUBLES;
 ```
+### Информация о БД
+```SQL
+SHOW { SCHEMAS | TABLES [ FROM schemaName ] | 
+COLUMNS FROM tableName [ FROM schemaName ] }
+```
+
+### Резервная копия
+```SQL
+BACKUP TO 'd:/backup.zip';
+```
 ___
  - # Задание:
    - ### Написать запрос, возвращающий  количество дублей фамилий, если совпадений больше 3. Результат отсортировать по количеству совпадений от большего к меньшему.
