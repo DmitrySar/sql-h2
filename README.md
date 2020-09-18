@@ -79,6 +79,11 @@ SELECT LASTNAME , SUM(RESULT) AS SUMMA FROM WITH_AVERAGE GROUP BY LASTNAME;
 ALTER TABLE DEMO ADD COLUMN (PERSON_ID INT);
 ALTER TABLE DEMO ADD FOREIGN KEY ( PERSON_ID) REFERENCES PERSON (ID);
 ```
+### [Объединение таблиц JOIN](http://www.h2database.com/html/grammar.html?highlight=join&search=join#table_expression)
+![join](http://www.dtulyakov.ru/images/SQL_Joins.svg)
+```SQL
+TEST1 AS T1 LEFT JOIN TEST2 AS T2 ON T1.ID = T2.PARENT_ID
+```SQL
 
 ### Запрос SQL, возвращающий количество дублей фамилий:
 ```SQL
