@@ -3,6 +3,7 @@
 ___
 
 ## Повторение предыдущей темы (*операции CRUD*)
+## [Тестовая БД](https://drive.google.com/file/d/1z8zcTIM0Fe3Q4TyBDHwodeGCJKRwT_i5/view?usp=sharing)
 
 ### Удаляет таблицу, если она уже существует:
 ```SQL
