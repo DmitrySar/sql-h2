@@ -222,6 +222,7 @@ class DBAccess {
 
     public List<Person> getAllPersons() {
     	// String query = "SELECT * FROM PERSON LIMIT 100, 200";
+	//Class.forName(driver);
     	String query = "SELECT * FROM PERSON";
     	List<Person> persons = new ArrayList<>();
         try (Connection connection = DriverManager.getConnection(dbSource, login, password);
